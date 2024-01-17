@@ -23,3 +23,7 @@ app.post('/todos', (req, res) => {
     res.status(201).json(todo);
 });
 
+app.delete('/todos/:id', (req, res) => {
+    todos = todos.filter(t => t.id !== parseInt(res.params.id));
+    res.status(204).send()
+})
